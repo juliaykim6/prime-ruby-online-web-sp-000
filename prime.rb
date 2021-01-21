@@ -1,10 +1,6 @@
 # Add  code here!
 def prime?(num)
-  1.upto(Math.sqrt(num)) do |x|
-    if n % x ==0
-      return false
-    else
-      return true
-    end
-  end
+  return false if n < 2
+
+  (2..n/2).none?{|i| n % i == 0}
 end
